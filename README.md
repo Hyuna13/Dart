@@ -1,2 +1,2 @@
 # Dart
-learning dart 
+Learning Dart from nomadcoders
