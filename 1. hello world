@@ -1,0 +1,10 @@
+dart는 main 함수에서 코드가 호출됨
+main이 없다면 실행이 되지 않음
+
+
+void main(){
+  print("Hello World!");
+}
+
+세미콜론(;) 필수
+자동으로 붙여주지 않음
