@@ -1,0 +1,11 @@
+변수를 변경할때는 같은 타입으로!
+
+변수를 만드는 두가지 방법
+var name = 'hyuna'; 
+String name = 'hyuna'; 명시적으로 타입 지정
+
+함수내에서 혹은 메소드안에서 지역변수를 선언하는 경우라면 var을 사용 (컴파일러가 이미 타입을 알고 있기 때문)
+
+void main() {
+  String email = "xx.xxx@gmail.com";
+}
