@@ -1,0 +1,32 @@
+null safety란 개발자가 null 값을 참조할 수 없게 하는 것
+
+bool isEmpty(String string) => string.length == 0;
+
+main(){
+  isEmpty(null);
+}
+
+=> NoSuchMethodError를 실행
+바로 String을 보내야 할 곳에 null을 보냈기 때문
+null에는 length라는 속성이 없음
+
+dart에서는 변수가 null이 될 수 있음을 명시해야됨
+void main(){
+  String name = "jisoung";
+  name = null;
+}
+=> ERROR / name이 null 값을 참조할 수 있다고 알려주지 않음
+
+void main(){
+  String? name = "jisoung";
+  name = null;
+}
+
+`?`를 사용해 이 변수에는 null이 참조될 수 있음을 알려줌 만약 `?`를 붙인 변수는 이 변수가 null인지 아닌지 확인해야 함
+
+void main(){
+  String? email = "calasd@gmail.com";
+  email = null;
+  if(email != null){
+  email.isNotEmpty;
+}
