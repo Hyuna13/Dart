@@ -1,0 +1,7 @@
+final variable은 js에서 const와 같음
+
+변수를 수정하지 못하게 하고 싶을때는
+void main() {
+  final name = "hyuna"
+  //final String name = "hyuna"
+}
