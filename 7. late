@@ -1,0 +1,7 @@
+late variable은 초기 데이터 없이 값을 설정할수 있게 해줌
+
+void main() { 
+  late final String name;
+  //....보통 api를 받아서 나중에 설정할때 많이 사용
+  name = "123";
+}
