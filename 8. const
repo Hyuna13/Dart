@@ -1,0 +1,11 @@
+const는 js에서의 const와는 다름
+compile-time 상수 / 수정불가능
+
+const와 final의 차이점
+final은 런타임중에 만들어질수있음 / 사용자가 앱을 사용하면서 변수가 생성될수있다
+const의 값은 코드를 컴파일 하기전에 알고있어야한다
+
+
+void main() {
+  const api = "123123";
+}
