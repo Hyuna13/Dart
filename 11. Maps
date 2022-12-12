@@ -1,0 +1,23 @@
+JS에서 object와 같음
+Dart에서 object는 어떤 자료형이든 될수있다 <String, Object(String, Number..any)>
+ 
+void main() {
+  var player = {
+    'name': 'Hyuna',
+    'age': 21,
+    'power': true,
+    'level': 1.3
+  }
+  
+  Map<int, bool> player = {
+    1: true,
+    2: true,
+    3: false
+  }//자료 명시
+  
+  Map<List<int>, bool> player = {
+    [1,2,3]: true,
+    [5,6]: true,
+    [9,10]: false
+  }//자료 명시
+}
