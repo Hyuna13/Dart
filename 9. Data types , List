@@ -6,19 +6,36 @@ void main() {
   num x = 10 or 1.1;
 }
 
-List
 void main() {
   var giveMeFive = true; 
   var numbers = [
     1,
     2,
     3,
-    if (giveMeFive) 5; //collection if
+    if (giveMeFive) 5; //collection if를 사용하면 `존재할 수도 안할 수도 있는 요소를 가지고 올 수 있음`
    ];
-  print(numbers)
+  print(numbers);
   ==> [1,2,3,5]
   
   List<int> numbers = [1,2,3]; //자료형 명시할때
 }
 
-//collection if를 사용하면 `존재할 수도 안할 수도 있는 요소를 가지고 올 수 있음`
+void main() {
+  var oldFriends = [
+    "as",
+    "df",
+    "gh"
+   ];
+   var newFriends = [
+    "qweqwe",
+    "rterter"
+    for(var friend in oldFriends) "^^ $friend",
+   ];
+    //for(var friend in oldFriends){
+        newFriends.add(friend)
+      } 이렇게쓰는대신에 위처럼 줄일수있음
+      
+  print(newFriends);
+  
+  List<int> numbers = [1,2,3]; //자료형 명시할때
+}
