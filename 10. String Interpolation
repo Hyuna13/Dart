@@ -1,0 +1,9 @@
+단순한 변수 값 $변수
+계산을 할때는 ${변수}
+
+void main() {
+  var name = "Hyuna";
+  var age = 20;
+  var greeting1 = "My name is $name, I'm ${age + 1} years old";
+  var greeting2 = 'My name is $name, I\'m ${age + 1} years old';
+}
