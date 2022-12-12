@@ -1,0 +1,24 @@
+void main() {
+  String name = Hyuna;
+  bool alive = true;
+  int age = 21;
+  double money = 1.2;
+  num x = 10 or 1.1;
+}
+
+List
+void main() {
+  var giveMeFive = true; 
+  var numbers = [
+    1,
+    2,
+    3,
+    if (giveMeFive) 5; //collection if
+   ];
+  print(numbers)
+  ==> [1,2,3,5]
+  
+  List<int> numbers = [1,2,3]; //자료형 명시할때
+}
+
+//collection if를 사용하면 `존재할 수도 안할 수도 있는 요소를 가지고 올 수 있음`
