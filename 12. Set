@@ -1,0 +1,17 @@
+Set에서 모든 아이템들은 특별함
+void main() {
+  Set<int> numbers = {1,2,3,4};
+  numbers.add(1);
+  numbers.add(1);
+  print(numbers);
+  => {1,2,3,4} 
+  
+  //List 였다면
+  List<int> numbers = [1,2,3,4];
+  numbers.add(1);
+  numbers.add(1);
+  print(numbers);
+  => [1,2,3,4,1,1] 
+}
+
+요소가 하나씩만 있어야 한다면 Set을 사용
