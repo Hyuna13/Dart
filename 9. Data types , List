@@ -29,7 +29,7 @@ void main() {
    var newFriends = [
     "qweqwe",
     "rterter"
-    for(var friend in oldFriends) "^^ $friend",
+    for(var friend in oldFriends) "^^ $friend", //collection for
    ];
     //for(var friend in oldFriends){
         newFriends.add(friend)
