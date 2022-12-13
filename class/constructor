@@ -1,0 +1,97 @@
+class
+Dart에서 class는 중요한 역할을 함
+
+constructor함수 클래스 이름과 같아야함
+class Player {
+  late final String name;
+  late int xp;
+  
+  Player(String name, int xp) {
+    this.name = name;
+    this.xp = xp;
+  } //constructors
+  
+  final String name;
+  int xp;
+  Player(this.name, this.xp); //더 짧게 하려면
+  
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  var player = Player("hyuna", 1500);
+  player.sayHello();
+}
+
+--------------------------
+
+Named Constructor Parameters
+클래스가 커질때 positional argument를 사용하기 번거로움
+
+class Player {
+  final String name;
+  int xp;
+  String team;
+  int age;
+  
+  Player({required this.name, required this.xp, required this.team, required this.age});
+  
+  void sayHello(){
+    print("Hello my name is $name, xp is $xp, team is $team, $age years old");
+  }
+}
+
+void main() {
+   var player = Player(
+      name: "hyuna",
+      xp: 1200,
+      team: "blue",
+      age: 21
+    );
+   player.sayHello();
+}
+
+---------------------------
+
+Named contructor parameter
+constructor를 여러개 만들고 싶다면
+':' 사용해 초기화하는 method를 만들수있음
+
+class Player{
+  final String name;
+  int xp;
+  String team;
+  int age;
+  
+  Player({
+    required this.name, 
+    required this.xp,
+    required this.team,
+    required this.age
+  });
+  
+  Player.createBluePlayer({
+    required String name,
+    required int age
+  }) : //syntax
+  this.age = age,
+  this.name = name,
+  this.team = "blue",
+  this.xp = 0;
+  
+  Player.createRedPlayer(String name, int age) : //positional
+  this.age = age,
+  this.name = name,
+  this.team = "red",
+  this.xp = 0;
+}
+
+void main() {
+  var player = Player.createBluePlayer(
+    name: "hyuna",
+    age: 21
+  );
+  var player2 = Player.createRedPlayer("taylor", age: 34);
+}
