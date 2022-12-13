@@ -1,0 +1,60 @@
+argument를 넣어도 되고 안넣어도 될때
+
+String sayHello(String name, int age, [String? country = 'korea']) {
+  return "my name is $name, $age years old from $country";
+}
+
+void main() {
+  print(sayHello('hyuna', 21)); //argument를 적지않으면 cuba가 default로 나옴
+}
+
+
+-----------
+
+QQ Operator  
+??
+left ?? right = left가 null이라면 right를 return한다 
+
+대문자로 바꾸기
+String capitalizeName(String? name) {
+  if (name != null) {
+    return name.toUpperCase();
+  }
+  return 'ANON';
+}
+
+syntax 사용
+String capitalizeName(String? name) => name != null ? name.toUpperCase() : 'ANON';
+
+QQ Operator 사용
+String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
+void main() {
+  capitalizeName('nico');
+}
+
+QQ equal 혹은 QQ assignment operator
+
+void main() {
+  String? name;
+  name ??= 'hyuna'; //name이 null이라면 'hyuna'라고 지정
+  print(name);
+}
+
+
+---------------
+
+Typedef
+데이터 alias를 만들때 사용
+
+typedef ListOfInts = List<int>
+ListOfInts reverseListOfNumbers(List<int> list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+void main() {
+  reverseListOfNumbers(list)
+}
+
+구조화된 data를 지정하고 싶다면 class가 필요
