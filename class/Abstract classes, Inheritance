@@ -1,0 +1,49 @@
+Abstract classes
+
+abstract class Human {
+  void walk();
+}
+
+enum Team { red, blue }
+
+class Player extends Human{
+  String name;
+  int xp;
+  Team team;
+  
+  Player({
+    required this.name, required this.xp, required this.team
+  });
+  
+  void walk(){
+    print('I'm walking');
+  }
+}
+
+-----------
+
+Inheritance 
+상속을 하고 super를 이용해 부모 클래스의 생성자를 호출할 수 있음
+
+class Human {
+  final String name;
+  Human({required this.name});
+  void sayHello(){
+    print("Hi my name is $name");
+  }
+}
+
+enum Team { red, blue }
+
+class Player extends Human{
+  final Team team;
+  
+  Player({
+    required this.team,
+    required String name
+  }) : super(name: name);
+}
+
+void main() {
+  var player = Player(team: Team.red, name: 'Hyuna');
+}
