@@ -1,0 +1,23 @@
+enum
+실수하지 않도록 도와주는 타입
+
+enum Team { red, blue }
+
+class Player {
+  final String name;
+  int xp;
+  Team team;
+  
+  Player({
+    required this.name, required this.xp, required this.team
+  });
+}
+
+void sayHello() {
+  var hyuna = Player(name: 'hyuna', xp: 1200, team: Team.blue)
+    ..hyuna.name = 'lasdf'
+    ..hyuna.xp = 4000
+    ..hyuna.team = Team.blue;
+}
+
+//솔리디티랑 비슷
