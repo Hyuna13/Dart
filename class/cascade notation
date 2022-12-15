@@ -1,0 +1,26 @@
+Cascade Notation
+
+class Player {
+  final String name;
+  int xp;
+  String team;
+  
+  Player({
+    required this.name, required this.xp, required this.team
+  });
+}
+
+void sayHello() {
+  var hyuna = Player(name: 'hyuna', xp: 1200, team: 'red');
+  hyuna.name = 'lasdf';
+  hyuna.xp = 4000;
+  hyuna.team = 'blue';
+}
+
+
+void sayHello() {
+  var hyuna = Player(name: 'hyuna', xp: 1200, team: 'red')
+    ..hyuna.name = 'lasdf'
+    ..hyuna.xp = 4000
+    ..hyuna.team = 'blue';
+}
